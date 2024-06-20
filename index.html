@@ -54,7 +54,7 @@
             width: 100%;
             height: max-content;
            position: fixed;
-           bottom: 1px;
+           bottom: 0px;
            z-index: 4;
             overflow: hidden;
             display: flex;
@@ -210,6 +210,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+             transition: 0.5s;
         }
 
         img {
@@ -218,8 +219,9 @@
         }
        
         .nb:hover {
-            transform: scale(0.9);
+            transform: scale(1.2);
             color: wheat;
+             transition: 0.5s;
         }
        
         @media only screen and (max-width:400px) {

@@ -43,16 +43,19 @@
         .container {
             background-color: black;
             width: 100%;
-            height: 52px;
+            height: 50vh;
             position: sticky;
             top: 0;
             overflow: hidden;
             z-index: 5;
+            /* border-bottom: 8px solid darkred; */
+            animation: intro 2s ease 2s 1 forwards,
+                       bordb 3s ease 2s 1 forwards;
         }
         .container2{
             background-color: black;
             width: 100%;
-            height: max-content;
+            height: 50vh;
            position: fixed;
            bottom: 0px;
            z-index: 4;
@@ -61,7 +64,47 @@
             align-items: center;
             justify-content: space-around;
             font-family: "Lobster", sans-serif;
+            /* border-top: 8px solid darkred; */
+            animation: intro 2s ease 2s 1 forwards,
+                       bordt 3s ease 2s 1 forwards;
 
+        }
+        @keyframes bordt {
+            from{}
+            to{
+                border-top: 8px solid darkred;
+            }
+        }
+        @keyframes bordb {
+            from{}
+            to{
+                border-bottom: 8px solid darkred;
+            }
+        }
+        @keyframes intro {
+            from{
+                height: 50vh;
+            }
+            to{
+                height: 52px;
+            }
+            
+        }
+        @keyframes fadein{
+            from{
+                opacity: 0%;
+            }
+            to{
+                opacity: 100%;
+            }
+        }
+        @keyframes fadeinout{
+            from{
+                opacity: 0%;
+            }
+            to{
+                opacity: 70%;
+            }
         }
         .container2>a{
             transition: 0.5s;
@@ -70,18 +113,18 @@
             text-decoration-color: rgb(4, 4, 46);
             margin-bottom: 9px;
             margin-top: 14px;
-            opacity: 70%;
+            opacity: 0%;
+            animation: fadeinout 2s ease 4s 1 forwards;
         }
         .container2>a:hover{
             opacity: 100%;
-            transform: scale(1.2)
-                     translateY(-4px);
-
+            transform: scale(1.2) translateY(-4px);
             transition: 0.5s;
-            /* letter-spacing: 2px; */
+            letter-spacing: 1px;
+            color: rgb(230, 110, 110);
             text-decoration: overline;
             text-decoration-thickness: 3px;
-            text-decoration-color: white;
+            text-decoration-color:  rgb(230, 110, 110);
         }
 
         a {
@@ -91,7 +134,7 @@
 
         .footer {
             bottom: 0;
-            height: 100px;
+            height: 200px;
             width: 100%;
             margin-bottom: 0;
             background-color: black;
@@ -109,8 +152,10 @@
             font-weight: 900;
             font-family: "Lobster", sans-serif;
             font-weight: 400;
-            animation: abc 3.5s ease-in 0s 1 reverse,
-                def 1.5s ease-in 3s 1 forwards;
+            opacity: 0%;
+            animation: abc 3.5s ease-in 4s 1 reverse,
+                def 1.5s ease-in 7s 1 forwards,
+               fadein 2s ease 4s 1 forwards;
             transition: 1s;
             background: linear-gradient(to right bottom, rgb(245, 207, 137), rgb(221, 165, 59));
             background-clip: text;
@@ -210,7 +255,9 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-             transition: 0.5s;
+            transition: 0.5s;
+            opacity: 0%;
+            animation: fadein 2s ease 4s 1 forwards;
         }
 
         img {
@@ -221,8 +268,29 @@
         .nb:hover {
             transform: scale(1.2);
             color: wheat;
-             transition: 0.5s;
+            transition: 0.5s;
         }
+::-webkit-scrollbar {
+  width: 12px;
+ 
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(63, 63, 63);
+ background-color: black;
+  
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: linear-gradient(red,purple);
+  border-radius: 10px;
+
+ 
+}
+::-webkit-scrollbar-thumb:hover{
+    background-image: linear-gradient(purple,red);
+    height: 190px;
+}
        
         @media only screen and (max-width:400px) {
             .box {
@@ -342,7 +410,7 @@
         <h3>khalidhassan20031@gmail.com</h3>
     </div>
     <main>
-        <!-- <button class="button">Contact</button> -->
+       
     </main>
     <footer>
         <div class="footer">

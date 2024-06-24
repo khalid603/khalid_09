@@ -26,7 +26,8 @@
             flex-direction: column;
 
         }
-        html{
+
+        html {
             scroll-behavior: smooth;
         }
 
@@ -49,64 +50,77 @@
             overflow: hidden;
             z-index: 5;
             /* border-bottom: 8px solid darkred; */
-            animation: intro 2s ease 2s 1 forwards,
-                       bordb 3s ease 2s 1 forwards;
+            animation: intro 2s ease 3.5s 1 forwards,
+                bordb 3s ease 2s 1 forwards;
         }
-        .container2{
+
+        /* into delay 2s */
+        .container2 {
             background-color: black;
             width: 100%;
             height: 50vh;
-           position: fixed;
-           bottom: 0px;
-           z-index: 4;
+            position: fixed;
+            bottom: 0px;
+            z-index: 4;
             overflow: hidden;
             display: flex;
             align-items: center;
             justify-content: space-around;
             font-family: "Lobster", sans-serif;
             /* border-top: 8px solid darkred; */
-            animation: intro 2s ease 2s 1 forwards,
-                       bordt 3s ease 2s 1 forwards;
+            animation: intro 2s ease 3.5s 1 forwards,
+                bordt 3s ease 2s 1 forwards;
 
         }
+
         @keyframes bordt {
-            from{}
-            to{
+            from {}
+
+            to {
                 border-top: 8px solid darkred;
             }
         }
+
         @keyframes bordb {
-            from{}
-            to{
+            from {}
+
+            to {
                 border-bottom: 8px solid darkred;
             }
         }
+
         @keyframes intro {
-            from{
+            from {
                 height: 50vh;
             }
-            to{
+
+            to {
                 height: 52px;
             }
-            
+
         }
-        @keyframes fadein{
-            from{
+
+        @keyframes fadein {
+            from {
                 opacity: 0%;
             }
-            to{
+
+            to {
                 opacity: 100%;
             }
         }
-        @keyframes fadeinout{
-            from{
+
+        @keyframes fadeinout {
+            from {
                 opacity: 0%;
             }
-            to{
+
+            to {
                 opacity: 70%;
             }
         }
-        .container2>a{
+
+        .container2>a {
             transition: 0.5s;
             text-decoration: overline;
             text-decoration-thickness: 1px;
@@ -116,7 +130,8 @@
             opacity: 0%;
             animation: fadeinout 2s ease 4s 1 forwards;
         }
-        .container2>a:hover{
+
+        .container2>a:hover {
             opacity: 100%;
             transform: scale(1.2) translateY(-4px);
             transition: 0.5s;
@@ -124,7 +139,7 @@
             color: rgb(230, 110, 110);
             text-decoration: overline;
             text-decoration-thickness: 3px;
-            text-decoration-color:  rgb(230, 110, 110);
+            text-decoration-color: rgb(230, 110, 110);
         }
 
         a {
@@ -141,7 +156,7 @@
             color: rgb(248, 204, 123);
             text-align: center;
             background-color: black;
-            border-top: 9px solid rgb(252, 213, 141);
+            /* border-top: 9px solid rgb(252, 213, 141); */
 
         }
 
@@ -155,7 +170,7 @@
             opacity: 0%;
             animation: abc 3.5s ease-in 4s 1 reverse,
                 def 1.5s ease-in 7s 1 forwards,
-               fadein 2s ease 4s 1 forwards;
+                fadein 2s ease 4s 1 forwards;
             transition: 1s;
             background: linear-gradient(to right bottom, rgb(245, 207, 137), rgb(221, 165, 59));
             background-clip: text;
@@ -264,34 +279,130 @@
             width: 94%;
             border-radius: 11px;
         }
-       
+
         .nb:hover {
             transform: scale(1.2);
             color: wheat;
             transition: 0.5s;
         }
-::-webkit-scrollbar {
-  width: 12px;
- 
-}
 
-::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px rgb(63, 63, 63);
- background-color: black;
-  
-}
+        .bboxx {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            bottom: -49vh;
+            height: 40vh;
+            animation: fadein 0.2s ease 2s 1 reverse forwards;
+        }
 
-::-webkit-scrollbar-thumb {
-  background-image: linear-gradient(red,purple);
-  border-radius: 10px;
+        .bboxx2 {
+            font-family: "Lobster", sans-serif;
+            letter-spacing: 3px;
+            color: white;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            bottom: -42vh;
+            height: 6vh;
+            animation: fadein 0.2s ease 2s 1 reverse forwards;
 
- 
-}
-::-webkit-scrollbar-thumb:hover{
-    background-image: linear-gradient(purple,red);
-    height: 190px;
-}
-       
+
+        }
+
+        .sub {
+            height: 50px;
+            width: 20px;
+            /* border: 2px solid white; */
+            margin: 3px;
+        }
+
+        .sb {
+            border-top-right-radius: 11px;
+            border-bottom-right-radius: 11px;
+
+        }
+
+        .sd {
+            border-top-left-radius: 11px;
+            border-bottom-left-radius: 11px;
+        }
+
+        .upa {
+            animation: ani1 0.3s linear 0s 1 forwards,
+                besta 0.3s linear 0.3s infinite alternate;
+                background-image: linear-gradient(to right,red,rgb(24, 2, 24));
+
+        }
+
+        .doa {
+            animation: ani2 0.3s linear 0s 1 forwards,
+                besta2 0.3s linear 0.3s infinite alternate;
+                background-image: linear-gradient(to right,rgb(31, 3, 3),purple);
+
+
+        }
+
+        @keyframes ani1 {
+            from {}
+
+            to {
+                transform: translateY(-15px);
+            }
+
+        }
+
+        @keyframes ani2 {
+            from {}
+
+            to {
+                transform: translateY(15px);
+            }
+
+        }
+
+        @keyframes besta {
+            from {}
+
+            to {
+                transform: translateY(15px);
+            }
+        }
+
+        @keyframes besta2 {
+            from {}
+
+            to {
+                transform: translateY(-15px);
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 12px;
+
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px rgb(63, 63, 63);
+            background-color: black;
+
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-image: linear-gradient(red, purple);
+            border-radius: 10px;
+
+
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-image: linear-gradient(purple, red);
+            height: 190px;
+        }
+
         @media only screen and (max-width:400px) {
             .box {
                 width: 260px;
@@ -306,20 +417,21 @@
             h5 {
                 font-size: 10px;
             }
-            }
-            @media only screen and (min-width:600px) {
-                .box {
-                    width: 400px;
-                }
+        }
 
-
+        @media only screen and (min-width:600px) {
+            .box {
+                width: 400px;
             }
 
-            @media only screen and (min-width:860px) {
-                .box {
-                    width: 700px;
-                }
+
+        }
+
+        @media only screen and (min-width:860px) {
+            .box {
+                width: 700px;
             }
+        }
     </style>
 </head>
 
@@ -341,6 +453,18 @@
                 </svg>
                 <h5>PICTURES</h5>
             </a>
+            
+            <div class="bboxx">
+
+                <div class="sub sd upa"></div>
+                <div class="sub doa"></div>
+                <div class="sub upa"></div>
+                <div class="sub doa"></div>
+                <div class="sub upa"></div>
+                <div class="sub sb doa"></div>
+            </div>
+            <div class="bboxx2">Loading....</div>
+        
         </header>
     </div>
     </div>
@@ -351,7 +475,8 @@
         <a href="#contact">Contact</a>
 
     </div>
-<div id="education"></div>
+
+    <div id="education"></div>
     <div class="box">
         <h1>EDUCATION</h1>
         <img src="https://tse1.mm.bing.net/th?id=OIP.06YDwXgWciF-kqmDxdaIxAHaEK&pid=Api&P=0&h=220" alt="img">
@@ -410,14 +535,14 @@
         <h3>khalidhassan20031@gmail.com</h3>
     </div>
     <main>
-       
+
     </main>
     <footer>
         <div class="footer">
             &copy; copy right reserved
         </div>
     </footer>
-  
+
 </body>
 
 </html>
